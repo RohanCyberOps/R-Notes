@@ -1,4 +1,4 @@
-![Demo](path/to/image "Optional Title")
+![Demo](image.png )
 
 ---
 
