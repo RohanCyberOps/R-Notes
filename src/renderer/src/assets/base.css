@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background-color: #88b68a; /* Soft, muted green */
+  color: #ffffff; /* White text for contrast */
+}
+
+@layer base {
+  :root {
+    /* Light Theme Variables */
+    --color-primary: #f4f5f7; /* Main background color */
+    --color-secondary: #ffffff; /* Secondary background, like cards */
+    --color-text-title: #091e42; /* Default text color */
+    --color-text: #091e42; /* Default text color */
+    --color-text-muted: #6b7280; /* Muted/secondary text */
+    --color-border: #e5e7eb; /* Light borders */
+    --color-accent: #3b82f6; /* Accent color for links, buttons */
+    --color-accent-hover: #2563eb; /* Accent hover color */
+    --color-success: #10b981; /* Success color (e.g., for badges) */
+    --color-error: #a53860; /* Error color (e.g., for alerts) */
+    --color-warning: #f59e0b; /* Warning color */
+    --color-shadow: rgba(0, 0, 0, 0.1); /* Light shadow for cards */
+  }
+
+  .dark {
+    /* Dark Theme Variables */
+    --color-primary: #232429; /* Main background color */
+    --color-secondary: #333742; /* Secondary background, like cards */
+    --color-text-title: #091e42; /* Default text color */
+    --color-text: #f0f0f1; /* Default text color */
+    --color-text-muted: #8790aa; /* Muted/secondary text */
+    --color-border: #4b5563; /* Dark borders */
+    --color-accent: #60a5fa; /* Accent color for links, buttons */
+    --color-accent-hover: #3b82f6; /* Accent hover color */
+    --color-success: #34d399; /* Success color (e.g., for badges) */
+    --color-error: #f87171; /* Error color (e.g., for alerts) */
+    --color-warning: #fbbf24; /* Warning color */
+    --color-shadow: rgba(0, 0, 0, 0.5); /* Dark shadow for cards */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-primary text-primary;
+    font-feature-settings:
+      'rlig' 1,
+      'calt' 1;
+  }
+}
